@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HS Trading Bot — Privacy Policy</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0d1117; color: #c9d1d9; line-height: 1.7; padding: 2rem; }
+    .container { max-width: 800px; margin: 0 auto; }
+    h1 { color: #58a6ff; margin-bottom: 0.5rem; font-size: 2rem; }
+    h2 { color: #58a6ff; margin-top: 2rem; margin-bottom: 0.5rem; font-size: 1.3rem; border-bottom: 1px solid #21262d; padding-bottom: 0.3rem; }
+    h3 { color: #c9d1d9; margin-top: 1rem; margin-bottom: 0.3rem; font-size: 1.1rem; }
+    p, li { margin-bottom: 0.6rem; }
+    ul { padding-left: 1.5rem; }
+    .date { color: #8b949e; margin-bottom: 2rem; }
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .back { margin-top: 2rem; display: inline-block; }
+    table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+    th, td { text-align: left; padding: 0.5rem 0.75rem; border: 1px solid #21262d; }
+    th { background: #161b22; color: #58a6ff; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Privacy Policy</h1>
+    <p class="date">Last updated: April 9, 2026</p>
+
+    <h2>1. Introduction</h2>
+    <p>This Privacy Policy explains what data the HS Trading Bot ("the Bot") collects, how it is used, how long it is retained, and your rights regarding that data.</p>
+
+    <h2>2. Data We Collect</h2>
+
+    <table>
+      <tr><th>Data</th><th>Source</th><th>Purpose</th></tr>
+      <tr><td>Discord User ID</td><td>Discord API</td><td>Identify your account across sessions</td></tr>
+      <tr><td>Discord Username</td><td>Discord API</td><td>Display your name in listings and trades</td></tr>
+      <tr><td>Trade Messages (DM relay)</td><td>Messages you send during trades</td><td>Relay to trade partner; stored for dispute resolution</td></tr>
+      <tr><td>Listings &amp; Offers</td><td>Commands you run</td><td>Facilitate trading</td></tr>
+      <tr><td>Transaction Records</td><td>Accepted trades</td><td>Track trade history, reputation</td></tr>
+      <tr><td>Ratings</td><td><code>/rate</code> command</td><td>Reputation system</td></tr>
+      <tr><td>Reports</td><td><code>/report</code> command</td><td>Moderation and safety</td></tr>
+      <tr><td>Reputation &amp; Stats</td><td>Completed trades</td><td>Trust scores (items sold/bought, rating average)</td></tr>
+    </table>
+
+    <h2>3. How We Use Your Data</h2>
+    <ul>
+      <li><strong>Trading:</strong> To create and display listings, relay trade messages, process offers, and track trade completion.</li>
+      <li><strong>Reputation:</strong> To calculate and display your reputation score and trade ratings.</li>
+      <li><strong>Moderation:</strong> To investigate reports, resolve disputes, and enforce bans.</li>
+      <li><strong>Bot Operation:</strong> To manage trade timeouts, expiry, and auto-completion.</li>
+    </ul>
+
+    <h2>4. Data Retention</h2>
+
+    <h3>Trade Messages (Chat Logs)</h3>
+    <ul>
+      <li><strong>Non-reported trades:</strong> Chat messages are automatically deleted <strong>7 days</strong> after they were sent.</li>
+      <li><strong>Reported trades:</strong> If a trade is reported, its chat messages are retained permanently for moderation purposes. Admins may manually delete them after the report is resolved.</li>
+    </ul>
+
+    <h3>Listings</h3>
+    <p>Listings expire automatically after 7 days (configurable) and are marked as expired. The listing data is retained for historical reference.</p>
+
+    <h3>Transactions, Ratings, Reports</h3>
+    <p>These records are retained for as long as the Bot operates, or until you request deletion.</p>
+
+    <h3>User Records</h3>
+    <p>Your user record (Discord ID, username, reputation, stats) is retained until you request deletion.</p>
+
+    <h2>5. Data Sharing</h2>
+    <p>We do not sell, rent, or share your data with any third parties. Your data is only accessible to:</p>
+    <ul>
+      <li>Other users in the context of trades (your username and reputation are visible on listings).</li>
+      <li>Bot administrators for moderation purposes (they can view reports, chat logs of reported trades, and user flags).</li>
+    </ul>
+
+    <h2>6. Data Storage &amp; Security</h2>
+    <p>Data is stored in a PostgreSQL database on the server where the Bot is hosted. Access is restricted to authorized administrators. API endpoints are protected by authentication and rate limiting.</p>
+
+    <h2>7. Your Rights</h2>
+
+    <h3>Right to Access</h3>
+    <p>You can view your own data through the <code>/dashboard</code> command which shows your stats, active listings, and trades.</p>
+
+    <h3>Right to Deletion</h3>
+    <p>You may request complete deletion of all your data by contacting a Bot administrator. Admins can use the <code>/admin deleteuser</code> command to permanently remove:</p>
+    <ul>
+      <li>Your user profile and stats</li>
+      <li>All chat messages you sent</li>
+      <li>All your listings and offers</li>
+      <li>All your transactions</li>
+      <li>All ratings you gave or received</li>
+      <li>All reports you filed or were named in</li>
+      <li>All admin flags and ban appeals</li>
+    </ul>
+    <p>This action is irreversible.</p>
+
+    <h3>Right to Restrict Processing</h3>
+    <p>You can stop using the Bot at any time. If you stop interacting with the Bot, no new data will be collected. Existing data will be subject to the retention policies above.</p>
+
+    <h2>8. Children's Privacy</h2>
+    <p>The Bot is not intended for users under the age of 13 (or the minimum age required by Discord in your jurisdiction). We do not knowingly collect data from children. If you believe a child is using the Bot, contact an administrator.</p>
+
+    <h2>9. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. The "Last updated" date at the top reflects the most recent revision. Continued use of the Bot after changes constitutes acceptance.</p>
+
+    <h2>10. Contact</h2>
+    <p>For privacy questions or data deletion requests, contact the Bot administrators through the support Discord server.</p>
+
+    <a href="/" class="back">← Back to Dashboard</a>
+  </div>
+</body>
+</html>
