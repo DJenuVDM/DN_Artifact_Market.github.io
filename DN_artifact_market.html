@@ -168,6 +168,21 @@
       margin: 8px;
     }
     .invite-btn:hover { background: #4752c4; transform: translateY(-1px); }
+    .kofi-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #ff5e5b;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 700;
+      padding: 14px 32px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+      margin: 8px;
+    }
+    .kofi-btn:hover { background: #e04e4b; transform: translateY(-1px); }
     .hosting-badge {
       display: inline-block;
       background: #1a3a2a;
@@ -211,11 +226,17 @@
   <p class="subtitle">One shared marketplace across every Discord server — find more trades, faster</p>
 
   <div style="text-align:center; margin-bottom: 40px;">
-    <div class="hosting-badge">� DN Artifact Market</div>
+    <div class="hosting-badge">🖥️ Hosted on a VPS — Online 24/7</div>
     <br>
     <a class="invite-btn" href="https://discord.com/oauth2/authorize?client_id=1491114058382839878&permissions=84992&integration_type=0&scope=bot" target="_blank" rel="noopener noreferrer">
       <svg width="20" height="20" viewBox="0 0 71 55" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0)"><path d="M60.105 4.898A58.549 58.549 0 0045.653.415a.22.22 0 00-.232.11 40.784 40.784 0 00-1.8 3.697c-5.456-.817-10.886-.817-16.23 0a37.368 37.368 0 00-1.827-3.697.228.228 0 00-.233-.11 58.397 58.397 0 00-14.451 4.483.207.207 0 00-.095.082C1.578 18.773-.944 32.144.293 45.331a.244.244 0 00.093.167c6.073 4.46 11.955 7.167 17.729 8.962a.23.23 0 00.249-.082 42.08 42.08 0 003.627-5.9.225.225 0 00-.123-.312 38.772 38.772 0 01-5.539-2.638.228.228 0 01-.022-.378 31.173 31.173 0 001.1-.862.22.22 0 01.23-.031c11.62 5.307 24.198 5.307 35.679 0a.219.219 0 01.232.028c.356.293.728.586 1.103.865a.228.228 0 01-.02.378 36.384 36.384 0 01-5.54 2.635.227.227 0 00-.121.315 47.249 47.249 0 003.624 5.897.225.225 0 00.249.084c5.801-1.795 11.684-4.502 17.757-8.961a.228.228 0 00.092-.164c1.48-15.315-2.48-28.574-10.497-40.353a.18.18 0 00-.093-.084zm-36.38 32.427c-3.497 0-6.38-3.211-6.38-7.156 0-3.944 2.827-7.156 6.38-7.156 3.583 0 6.437 3.24 6.38 7.156 0 3.945-2.827 7.156-6.38 7.156zm23.593 0c-3.498 0-6.38-3.211-6.38-7.156 0-3.944 2.826-7.156 6.38-7.156 3.582 0 6.437 3.24 6.38 7.156 0 3.945-2.826 7.156-6.38 7.156z" fill="currentColor"/></g><defs><clipPath id="clip0"><path fill="currentColor" d="M0 0h71v55H0z"/></clipPath></defs></svg>
       Add to Your Server
+    </a>
+    <a class="kofi-btn" href="https://ko-fi.com/tobeknown" target="_blank" rel="noopener noreferrer">
+      ☕ Support on Ko-fi
+    </a>
+    <a class="kofi-btn" href="https://discord.gg/f623jaAsBH" target="_blank" rel="noopener noreferrer">
+      Join the Dn Atrifact Market Server
     </a>
   </div>
 
@@ -237,7 +258,7 @@
   <p>DN Artifact Market is a Discord bot that connects Hades' Star players across every server into <strong>one shared artifact marketplace</strong>. Post a listing in your server and the entire network can see it. Search and you'll find listings from every other server too — not just your own.</p>
   <p>No currency, no external websites. Pure artifact-for-artifact barter, all within Discord.</p>
   <div class="highlight-box" style="margin-top:16px;">
-    <strong>🌐 DN Artifact Market</strong> runs 24/7 and your data is not shared with any third party.
+    <strong>🌐 DN Artifact Market</strong> is hosted on a dedicated VPS — it runs 24/7, independent of any personal machine, and your data is not shared with any third party.
   </div>
 
   <!-- ======================== TRADING FLOW ======================== -->
@@ -319,6 +340,64 @@
     <div class="card">
       <div class="card-title">/report</div>
       <div class="card-desc">Report issues with multi-category flow. Chat logs preserved.</div>
+    </div>
+  </div>
+
+  <!-- ======================== GROUPS ======================== -->
+  <h2>Cross-Server Groups</h2>
+  <p>Groups let server admins create <strong>private networks</strong> of channels across different servers that share listings with each other exclusively. Instead of posting globally to every server, a group keeps trades within a trusted circle of communities.</p>
+
+  <div class="highlight-box green">
+    <h3>🌐 Why Use a Group?</h3>
+    <p style="margin-bottom:8px;">Perfect for alliances, friend groups, or partner communities who want a shared marketplace without opening up to the entire global network.</p>
+    <ul>
+      <li>Create a group from any channel — it becomes the group's home channel automatically</li>
+      <li>Invite other servers by sharing your Group ID — they join with <code>/group join</code></li>
+      <li>Listings in member channels are shared only within the group</li>
+      <li>Block servers you don't want joining — any existing channels from that server are removed instantly</li>
+    </ul>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <div class="card-title"><code>/group create</code> &nbsp; <span class="badge badge-orange">Admin Only</span></div>
+      <div class="card-desc">Create a new group from the current channel. You become the group owner and get a shareable Group ID.</div>
+    </div>
+    <div class="card">
+      <div class="card-title"><code>/group join</code></div>
+      <div class="card-desc">Add your current channel to an existing group using its Group ID. Requires group admin rights.</div>
+    </div>
+    <div class="card">
+      <div class="card-title"><code>/group leave</code></div>
+      <div class="card-desc">Remove your current channel from a group. Requires group admin rights.</div>
+    </div>
+    <div class="card">
+      <div class="card-title"><code>/group info</code></div>
+      <div class="card-desc">View all channels, admins, and blocked servers in a group.</div>
+    </div>
+    <div class="card">
+      <div class="card-title"><code>/group mine</code></div>
+      <div class="card-desc">List all groups you have admin rights in, with your ownership status.</div>
+    </div>
+    <div class="card">
+      <div class="card-title"><code>/group delete</code> &nbsp; <span class="badge badge-red">Owner Only</span></div>
+      <div class="card-desc">Permanently delete a group and remove all its channels. Cannot be undone.</div>
+    </div>
+    <div class="card">
+      <div class="card-title"><code>/group addadmin</code> &nbsp; <span class="badge badge-red">Owner Only</span></div>
+      <div class="card-desc">Grant another user admin rights over the group so they can manage channels.</div>
+    </div>
+    <div class="card">
+      <div class="card-title"><code>/group removeadmin</code> &nbsp; <span class="badge badge-red">Owner Only</span></div>
+      <div class="card-desc">Revoke a user's admin rights from the group.</div>
+    </div>
+    <div class="card">
+      <div class="card-title"><code>/group blockserver</code> &nbsp; <span class="badge badge-red">Owner Only</span></div>
+      <div class="card-desc">Block a server from joining your group by its server ID. Any channels from that server are removed immediately.</div>
+    </div>
+    <div class="card">
+      <div class="card-title"><code>/group unblockserver</code> &nbsp; <span class="badge badge-red">Owner Only</span></div>
+      <div class="card-desc">Remove a server block, allowing that server to join the group again.</div>
     </div>
   </div>
 
@@ -462,6 +541,9 @@
       <svg width="20" height="20" viewBox="0 0 71 55" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0b)"><path d="M60.105 4.898A58.549 58.549 0 0045.653.415a.22.22 0 00-.232.11 40.784 40.784 0 00-1.8 3.697c-5.456-.817-10.886-.817-16.23 0a37.368 37.368 0 00-1.827-3.697.228.228 0 00-.233-.11 58.397 58.397 0 00-14.451 4.483.207.207 0 00-.095.082C1.578 18.773-.944 32.144.293 45.331a.244.244 0 00.093.167c6.073 4.46 11.955 7.167 17.729 8.962a.23.23 0 00.249-.082 42.08 42.08 0 003.627-5.9.225.225 0 00-.123-.312 38.772 38.772 0 01-5.539-2.638.228.228 0 01-.022-.378 31.173 31.173 0 001.1-.862.22.22 0 01.23-.031c11.62 5.307 24.198 5.307 35.679 0a.219.219 0 01.232.028c.356.293.728.586 1.103.865a.228.228 0 01-.02.378 36.384 36.384 0 01-5.54 2.635.227.227 0 00-.121.315 47.249 47.249 0 003.624 5.897.225.225 0 00.249.084c5.801-1.795 11.684-4.502 17.757-8.961a.228.228 0 00.092-.164c1.48-15.315-2.48-28.574-10.497-40.353a.18.18 0 00-.093-.084zm-36.38 32.427c-3.497 0-6.38-3.211-6.38-7.156 0-3.944 2.827-7.156 6.38-7.156 3.583 0 6.437 3.24 6.38 7.156 0 3.945-2.827 7.156-6.38 7.156zm23.593 0c-3.498 0-6.38-3.211-6.38-7.156 0-3.944 2.826-7.156 6.38-7.156 3.582 0 6.437 3.24 6.38 7.156 0 3.945-2.826 7.156-6.38 7.156z" fill="currentColor"/></g><defs><clipPath id="clip0b"><path fill="currentColor" d="M0 0h71v55H0z"/></clipPath></defs></svg>
       Add to Your Server
     </a>
+    <a class="kofi-btn" href="https://ko-fi.com/tobeknown" target="_blank" rel="noopener noreferrer">
+      ☕ Support on Ko-fi
+    </a>
   </div>
 
   <div class="footer">
@@ -471,4 +553,5 @@
 </div>
 
 </body>
+</html>
 </html>
